@@ -1,0 +1,34 @@
+<!-- _footer.ejs -->
+
+<link rel="stylesheet" href="<%= assetPath('CSS/footer.css')%>">
+<div id="footer">
+  <div id="left-footer">
+    &copy; ChatCell. All Rights Reserved
+  </div>
+  
+  <div id="right-footer">
+    <ul type="none">
+
+      <li>
+        <a href="/">
+          Home
+        </a>
+      </li>
+
+      <% if(locals.user){%>
+        <li>
+          <a href="/users/profile">
+            Profile
+          </a>
+        </li>
+        <%} else {%>
+        <li>
+          <a href="/users/sign-in">
+            Profile
+          </a>
+        </li>
+      <%}%>
+      
+    </ul>
+  </div>
+</div>

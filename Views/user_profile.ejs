@@ -1,0 +1,43 @@
+<!-- user_profile.ejs -->
+
+<link rel="stylesheet" href="<%= assetPath('CSS/user_profile.css')%>">
+<h1>
+  Welcome To <%= siteName %> User Profile Page
+</h1>
+
+<img src="<%= profile_user.avatar %>" alt="<%= profile_user.name %>" width="100">
+
+
+<%if(user.id == profile_user.id){%>
+
+  <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="post">
+    <input type="text" name="name" placeholder="Your Updated Name ??" value="<%=profile_user.name%>" required>
+    <input type="email" name="email" placeholder="Your Updated Email ??" value="<%=profile_user.email%>" required>
+    <input type="file" name="avatar" placeholder="Profile Picture">
+
+    <input type="submit" value="Update">
+  </form>
+
+<%}else{%>
+
+  <p>Name : <%= profile_user.name %></p>
+  <p>E-mail Id : <%= profile_user.email %></p>
+  <p><!-- <%= profile_user.password %> --> Password : ********</p> 
+  <p>
+    <% if(friendOrNot) { %>
+        <form action="/friendship/addfriend" method="post">
+            <input type="hidden" name="friendUserId" value="<%= profile_user.id %>">
+            <input type="submit" value="Unfriend">
+        </form>
+    <% } else {%> 
+    <form action="/friendship/addfriend" method="post">
+        <input type="hidden" name="friendUserId" value="<%= profile_user.id %>">
+        <input type="submit" value="add friend">
+    </form>
+    <% } %>
+    <!-- <a href="/friendship/addfriend" data-method="post"> + Add friends </a> -->
+    <!-- <%= profile_user.friendship %> -->
+    <!-- <% if(profile_user.friendship) %> -->
+  </p>
+  
+<%}%>

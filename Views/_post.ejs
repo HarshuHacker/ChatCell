@@ -1,0 +1,52 @@
+<!-- _post.ejs -->
+
+<li id="post-<%= post._id %>">
+  <p>
+    <%= post.content%>
+    <%if(locals.user && locals.user.id == post.user.id){%>
+      <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
+        <b>
+          <i class="fas fa-trash"></i>
+        </b>
+      </a>
+    <%}%>
+    <br>
+    <small>
+      Posted By : <%=post.user.name%>
+      <i>
+        (<%= post.user.email %>)
+      </i>
+    </small>
+    <br>
+    <!-- display the likes of this post, if the user is logged in then show the link to toggle likes, else just show the count -->
+    <small>
+      <% if(locals.user){ %>
+        <a class="toggle-like-button" data-likes="<%= post.likes.length%>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
+          <i class="fa-regular fa-heart"></i> <%= post.likes.length %>
+        </a>
+      <%} else {%>
+        <i class="fa-regular fa-heart"></i> <%= post.likes.length %>
+      <%}%>
+    </small>
+  </p>
+
+  <div class="post-comments">
+    <% if(locals.user) {%>
+      <form id="post-<%= post._id %>-comments-form" action="/comments/create" method="post">
+        <input type="text" name="content" placeholder="Type Here To Add Comment" style="width: 200px;">
+        <input type="hidden" name="post" value="<%= post._id %>">
+        <input type="submit" value="Add">
+      </form>
+    <%}%>
+  
+    <div class="post-comments-list">
+      <ul id="post-comments-<%= post._id %>" style="padding-left: 5px;">
+        <% for (comment of post.comments) {%>
+          <%- include("_comment") -%>
+        <%}%>
+      </ul>
+    </div>
+  
+  </div>
+
+</li>

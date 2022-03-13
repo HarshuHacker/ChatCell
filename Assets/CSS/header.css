@@ -1,0 +1,23 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2vw;
+  background-color: black;
+  color: white;
+  height: 7.5vh; }
+
+#header a {
+  color: white;
+  text-decoration: none; }
+
+#right-header ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  width: auto;
+  font-size: 1.1rem; }
+
+#right-header ul li {
+  padding: 2vw; }

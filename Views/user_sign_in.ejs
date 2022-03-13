@@ -1,0 +1,53 @@
+<!-- user_sign_in.ejs -->
+
+<link rel="stylesheet" href="<%=assetPath('CSS/user_sign_in.css') %>">
+
+<img src="<%= assetPath('Images/Sign Background.png')%>" alt="Background" style="width: 100%; height: 100%; z-index: -1;">
+
+<main>
+  <div id="left-side">
+  
+  </div>
+  
+  <div id="right-side">
+    <h2>Sign In</h2>
+
+    <form action="/users/create-session" method="post">
+
+      <div id="email-div">
+        <label for="email">
+          Email Id 
+        </label>
+        <br>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email Id" required>
+      </div>
+
+      <div id="password-div">
+        <label for="password">
+          Password
+        </label>
+        <br>
+        <br>
+        <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+      </div>
+      
+      <div class="sign-in-button">
+        <button type="submit">Sign In</button>
+      </div>
+
+      <div class="sign-in-button">
+        <a href="/users/auth/google">
+          <button type="button">
+            <i class="fa-brands fa-google"></i> Sign In
+          </button>
+        </a>
+      </div>
+
+      <div id="forgot-password">
+        <a href="/users/forgetPassword">Forgot Password ??</a>
+      </div>
+      
+    </form>
+  </div>
+</main>
