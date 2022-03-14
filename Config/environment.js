@@ -21,12 +21,12 @@ const development = {
     port: 587,
     secure: false,
     auth: {
-      user: "harshisindian@gmail.com",
-      pass: "ayushpogo2000"
+      user: "chatcell21@gmail.com",
+      pass: "chat@cell"
     }
   },
-  google_client_id: "131425656802-t9t4agqq69n2o6pr7jcoq5ttp9pqsnib.apps.googleusercontent.com",
-  google_client_secret: "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",
+  google_client_id: "207091171920-jgsmpj42mhj3slh4scdmua8qg45asbfl.apps.googleusercontent.com",
+  google_client_secret: "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",
   google_call_back_url: "http://localhost:8000/users/auth/google/callback",
   jwt_secret_or_key: "CHATCELL",
   morgan: {
@@ -53,7 +53,6 @@ const production = {
   google_client_id: process.env.CHATCELL_GOOGLE_CLIENT_ID,
   google_client_secret: process.env.CHATCELL_GOOGLE_CLIENT_SECRET,
   google_call_back_url: process.env.CHATCELL_GOOGLE_CALL_BACK_URL,
-  // google_call_back_url: "http://chatcell.com/users/auth/google/callback",
   jwt_secret_or_key: process.env.CHATCELL_JWT_SECRET_OR_KEY,
   morgan: {
     mode: "combined",
@@ -61,6 +60,6 @@ const production = {
   }
 }
 
-// module.exports = eval(process.env.CHATCELL_ENVIRONMENT)==undefined ? development : eval(process.env.CHATCELL_ENVIRONMENT)
-module.exports = development
+module.exports = eval(process.env.CHATCELL_ENVIRONMENT)==undefined ? development : eval(process.env.CHATCELL_ENVIRONMENT)
+// module.exports = development
 // module.exports = production

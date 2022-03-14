@@ -1,8 +1,4 @@
 <div>
-    <p>Hi man please check this link to reset your password</p>
-    <br>
-    <br>
-   <p> http://localhost:8000/users/reset_password/?access_token=<%= resetpassobj.accessToken %> </p>
-    <br>
-    <br>
+    <p>Hi <strong><%= userName%></strong>, </p>
+    <p><a href="http://localhost:8000/users/reset_password/?access_token=<%= resetpassobj.accessToken %>">Click Here</a> To Reset Your Password</p>
 </div>

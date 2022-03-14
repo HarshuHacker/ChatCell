@@ -3,6 +3,7 @@
 const Comment=require("../Models/comment")
 const Post=require("../Models/post")
 const queue = require("../Config/kue")
+const commentEmailWorker = require("../workers/comment_email_worker")
 const Like = require("../Models/like")
 
 // For Creating A Comment

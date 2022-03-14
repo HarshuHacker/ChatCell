@@ -56,7 +56,11 @@
             <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
         </p>
     <% } %>
-</section>
+  </section>
+
+  <%-include("_chat_box")-%>
+  
+</div>
 
 <!-- importing this script for creating the comments -->
 <script src="<%= assetPath('Javascript/home_post_comments.js') %> " ></script>
