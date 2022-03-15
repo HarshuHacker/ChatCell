@@ -4733,3 +4733,5 @@
 ::1 - - [15/Mar/2022:08:41:23 +0000] "GET / HTTP/1.1" 304 - "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36"
 ::1 - - [15/Mar/2022:08:41:25 +0000] "GET /users/sign-in HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36"
 ::1 - - [15/Mar/2022:08:41:29 +0000] "GET /users/sign-up HTTP/1.1" 200 3594 "http://localhost:8000/users/sign-in" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36"
+[0mGET / [32m200[0m 105.524 ms - 4583[0m
+[0mGET /users/sign-in [32m200[0m 14.015 ms - 3066[0m
