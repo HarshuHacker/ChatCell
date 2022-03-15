@@ -1,4 +1,4 @@
-const queue = require('../config/kue');
+const queue = require('../Config/kue');
 const forgotMailer = require('../mailers/forgotPasswordMailer');
 
 queue.process('forgotpassword',function(job,done){  // we are passing the job to be process i.e the comments
