@@ -65,6 +65,7 @@ const path = require("path")
 // Use this only if the environment is set to development mode
 if(env.name == "development"){
     // Setting Up SASS 
+    console.log("Deve")
     app.use(sassMiddleware({
         // path from where we pich SASS file
         src: path.join(__dirname, env.asset_path, "SASS"),
@@ -79,6 +80,9 @@ if(env.name == "development"){
         //Make it false For SCSS and true for SASS
         indentedSyntax: true 
     }))
+}
+else{
+    console.log("Prod")
 }
 
 // Used For Storing Inputs From The User
