@@ -1,4 +1,4 @@
-const nodeMailer = require('../config/nodemailer');
+const nodeMailer = require('../Config/nodemailer');
 const User = require("../Models/user")
 
 exports.frogotpasswordLink = function(resetpassobj,email){
