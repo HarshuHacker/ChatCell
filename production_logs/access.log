@@ -4736,3 +4736,11 @@
 [0mGET / [32m200[0m 105.524 ms - 4583[0m
 [0mGET /users/sign-in [32m200[0m 14.015 ms - 3066[0m
 [0mGET / [32m200[0m 31.786 ms - 2937[0m
+[0mGET /users/sign-in [32m200[0m 47.953 ms - 3066[0m
+[0mGET /users/auth/google [36m302[0m 8.462 ms - 0[0m
+[0mGET /users/sign-up [32m200[0m 5.677 ms - 3539[0m
+[0mPOST /users/create [0m-[0m - ms - -[0m
+[0mPOST /users/create [36m302[0m 155.087 ms - 72[0m
+[0mGET /users/sign-in [36m304[0m 14.533 ms - -[0m
+[0mPOST /users/create-session [36m302[0m 65.059 ms - 46[0m
+[0mGET / [32m200[0m 138.726 ms - 3107[0m

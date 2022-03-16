@@ -7,7 +7,8 @@ const Mongoose=require("mongoose")
 const env = require("../Config/environment")
 
 // Connecting mon
-Mongoose.connect(`mongodb://localhost/${env.db}`)
+Mongoose.connect("mongodb+srv://chatcell21:chat%40cell@cluster1.shg2t.mongodb.net/ChatCellDB?retryWrites=true&w=majority")
+
 
 // 
 const db=Mongoose.connection
