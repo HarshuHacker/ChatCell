@@ -6,7 +6,8 @@ class ChatEngine{
     this.userEmail = userEmail
 
     // initiating the connection
-    this.socket = io.connect("http://52.200.39.191:4000")
+    // this.socket = io.connect("http://52.200.39.191:4000")
+    this.socket = io.connect("http://localhost:4000")
 
     // only if the user has initialized a connection
     if(this.userEmail){
