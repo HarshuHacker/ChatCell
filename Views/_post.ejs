@@ -13,9 +13,9 @@
     <br>
     <small>
       Posted By : <%=post.user.name%>
-      <i>
-        (<%= post.user.email %>)
-      </i>
+      <!-- <i>
+        (<%= post.user.name %>)
+      </i> -->
     </small>
     <br>
     <!-- display the likes of this post, if the user is logged in then show the link to toggle likes, else just show the count -->
@@ -33,9 +33,9 @@
   <div class="post-comments">
     <% if(locals.user) {%>
       <form id="post-<%= post._id %>-comments-form" action="/comments/create" method="post">
-        <input type="text" name="content" placeholder="Type Here To Add Comment" style="width: 200px;">
-        <input type="hidden" name="post" value="<%= post._id %>">
-        <input type="submit" value="Add">
+        <input class="type-comment" type="text" name="content" placeholder="Type Here To Add Comment" style="width: 200px;">
+        <input class="hidden-comment" type="hidden" name="post" value="<%= post._id %>">
+        <input class="comment-add-button" type="submit" value="Add">
       </form>
     <%}%>
   

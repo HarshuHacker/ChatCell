@@ -5,6 +5,15 @@
 <!-- CHANGE :: Creat the code for chat box -->
 <% if (locals.user){ %>
 	<div id="user-chat-box">
+		<div class="chat-header">
+			<div id="group-chat">
+				Group Chat
+			</div>
+			<div id="minimize-icon">
+				<i class="fas fa-chevron-circle-down"></i>
+			</div>
+		</div>
+		<hr>
 		<ul id="chat-messages-list">
 			<li class="other-message">
 				<span>Other Message</span>
@@ -19,7 +28,9 @@
 		</ul>
 		<div id="chat-message-input-container">
 			<input id="chat-message-input" placeholder="Type message here">
-			<button id="send-message">Send</button>
+			<button id="send-message">
+				<i class="fas fa-paper-plane"></i>
+			</button>
 		</div>
 
 	</div>

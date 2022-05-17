@@ -2,7 +2,7 @@
 
 <li id="comment-<%= comment._id %>">
   <p>
-    Comment : <%= comment.content %>
+    <%= comment.content %>
     <%if(locals.user && locals.user.id == comment.user.id ){%>
       <a class="delete-comment-button" href="/comments/destroy/<%= comment.id%>">
         <i class="fas fa-trash"></i>
@@ -10,7 +10,7 @@
     <%}%>
     <br>
     <small>
-      Made By : <%= comment.user.name %>
+      Commented By : <%= comment.user.name %>
     </small>
     <br>
     <small>
