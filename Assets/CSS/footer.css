@@ -3,7 +3,8 @@
   justify-content: start;
   align-items: center;
   color: white;
-  height: 7.5vh; }
+  height: 7.5vh;
+  padding-left: 10px; }
 
 #right-footer ul {
   margin: 0; }
