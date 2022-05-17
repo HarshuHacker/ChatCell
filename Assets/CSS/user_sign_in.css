@@ -16,23 +16,26 @@ main {
     justify-content: center;
     font-size: 1.5rem; }
     main #right-side h2 {
+      margin-top: 15vh;
       margin-bottom: 8vh;
       text-decoration: underline; }
+    main #right-side form p {
+      margin: 1vh; }
     main #right-side form input {
       border: 1px solid white;
       border-radius: 10px;
       padding: 5px;
-      font-size: 1.3rem;
       outline: none;
       background: #c4aeec;
       color: none;
-      width: 30vw; }
+      width: 80%;
+      font-size: 1.5rem; }
     main #right-side form .sign-in-button {
       display: flex;
       flex-direction: column;
       display: inline-block; }
       main #right-side form .sign-in-button button {
-        width: 15vw;
+        width: 150px;
         cursor: pointer;
         padding: 10px;
         color: white;

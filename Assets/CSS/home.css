@@ -4,19 +4,22 @@
   #home-container #left-corner {
     width: 25%;
     padding: 1%;
-    font-size: 2rem;
-    margin-top: 4vh; }
+    font-size: 2rem; }
     #home-container #left-corner h4 {
       margin: 0px;
       text-align: center; }
   #home-container #feed-posts {
     width: 47%;
     padding: 1%;
-    border-left: 1px solid lightgray; }
+    margin: 1%;
+    margin-bottom: 2vh;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: white; }
     #home-container #feed-posts h4 {
       text-align: center;
       font-size: 2rem;
-      margin-top: 4vh; }
+      margin-top: 2vh; }
     #home-container #feed-posts textarea {
       font-size: 1.5rem;
       height: 10vh;
@@ -27,21 +30,27 @@
       font-size: 1.3rem;
       width: 100%;
       height: 30px;
-      border-radius: 15px; }
+      border-radius: 10px;
+      background-color: #ef7917;
+      color: white; }
     #home-container #feed-posts #posts-list-container ol {
       list-style: none;
       padding: 5px;
-      font-size: 1.3rem; }
+      font-size: 1.3rem;
+      margin: 0px; }
       #home-container #feed-posts #posts-list-container ol li {
-        margin: 10px 0px;
+        margin: 30px 0px;
         border: 1px solid black;
-        padding: 5px; }
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #eceffa; }
         #home-container #feed-posts #posts-list-container ol li .post-comments form {
           display: flex;
           justify-content: space-evenly; }
           #home-container #feed-posts #posts-list-container ol li .post-comments form .type-comment {
-            width: 75% !important;
-            padding: 0px 6px !important; }
+            width: 70% !important;
+            padding: 0px 6px !important;
+            background-color: white; }
           #home-container #feed-posts #posts-list-container ol li .post-comments form .hidden-comment {
             position: absolute; }
           #home-container #feed-posts #posts-list-container ol li .post-comments form .comment-add-button {
@@ -50,32 +59,36 @@
         #home-container #feed-posts #posts-list-container ol li .post-comments-list ul {
           padding: 0px;
           list-style: none; }
-  #home-container #user-friends {
+          #home-container #feed-posts #posts-list-container ol li .post-comments-list ul li {
+            background-color: white; }
+  #home-container .user-friends, #home-container #left-corner {
     width: 25%;
     padding: 1%;
-    border-left: 1px solid lightgray;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center; }
-    #home-container #user-friends div {
+    #home-container .user-friends div, #home-container #left-corner div {
       width: 90%;
-      height: 40vh;
+      height: 99%;
       border: 1px solid black;
       border-radius: 15px;
       text-align: center;
       overflow: hidden;
-      background-color: white; }
-      #home-container #user-friends div h2 {
+      background-color: white;
+      margin-bottom: 1vh; }
+      #home-container .user-friends div h2, #home-container #left-corner div h2 {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 5vh;
         margin: 2vh 0px;
         font-size: 2rem; }
-      #home-container #user-friends div div {
+      #home-container .user-friends div div, #home-container #left-corner div div {
         height: 29vh;
         width: 100%;
         overflow: scroll;
         border: none;
         font-size: 1.5rem; }
+        #home-container .user-friends div div a, #home-container #left-corner div div a {
+          text-decoration: none;
+          color: black; }

@@ -2,11 +2,9 @@
 
 <link rel="stylesheet" href="<%=assetPath('CSS/user_sign_in.css') %>">
 
-<img src="<%= assetPath('Images/Sign Background.png')%>" alt="Background" style="width: 100%; height: 100%; z-index: -1;">
-
 <main>
   <div id="left-side">
-  
+    <img src="<%= assetPath('Images/Sign Background.png')%>" alt="Background" style="width: 100%; height: 100%; z-index: -1;">
   </div>
   
   <div id="right-side">
@@ -15,21 +13,25 @@
     <form action="/users/create-session" method="post">
 
       <div id="email-div">
-        <label for="email">
-          Email Id 
-        </label>
-        <br>
-        <br>
-        <input type="email" name="email" id="email" placeholder="Enter Your Email Id" required>
+        <p>
+          <label for="email">
+            Email Id 
+          </label>
+        </p>
+        <p>
+          <input type="email" name="email" id="email" placeholder="Enter Your Email Id" required>
+        </p>
       </div>
 
       <div id="password-div">
-        <label for="password">
-          Password
-        </label>
-        <br>
-        <br>
-        <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+        <p>
+          <label for="password">
+            Password
+          </label>
+        </p>
+        <p>
+          <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+        </p>
       </div>
       
       <div class="sign-in-button">
