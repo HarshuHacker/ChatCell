@@ -4,6 +4,33 @@
 
 <!-- CHANGE :: Creat the code for chat box -->
 <% if (locals.user){ %>
+
+	<div id="user-chat-box-maximized">
+		<div class="chat-header">
+			<div id="group-chat">
+				Group Chat
+			</div>
+			<div class="minimize-maximize-icon">
+				<i class="fas fa-chevron-circle-down" onclick="minimizeChatBox()"></i>
+			</div>
+		</div>
+		<hr>
+		<ul id="chat-messages-list">
+			<li class="other-message">
+			</li>
+			<li class="self-message">
+			</li>
+
+		</ul>
+		<div id="chat-message-input-container">
+			<input id="chat-message-input" placeholder="Type message here">
+			<button id="send-message" onclick="clearTypedText()">
+				<i class="fas fa-paper-plane"></i>
+			</button>
+		</div>
+
+	</div>
+
 	<div id="user-chat-box-minimized">
 		<div class="chat-header">
 			<div id="group-chat">
@@ -29,35 +56,11 @@
 		</div>
 
 	</div>
-
-	<div id="user-chat-box-maximized">
-		<div class="chat-header">
-			<div id="group-chat">
-				Group Chat
-			</div>
-			<div class="minimize-maximize-icon">
-				<i class="fas fa-chevron-circle-down" onclick="minimizeChatBox()"></i>
-			</div>
-		</div>
-		<hr>
-		<ul id="chat-messages-list">
-			<li class="other-message">
-			</li>
-			<li class="self-message">
-			</li>
-
-		</ul>
-		<div id="chat-message-input-container">
-			<input id="chat-message-input" placeholder="Type message here">
-			<button id="send-message">
-				<i class="fas fa-paper-plane"></i>
-			</button>
-		</div>
-
-	</div>
 <% } %>
 
 <script>
+	document.getElementById('user-chat-box-minimized').style.cssText = 'display: none';
+
 	function maximizeChatBox() {
 		document.getElementById('user-chat-box-maximized').style.cssText = 'display: block';
 		document.getElementById('user-chat-box-minimized').style.cssText = 'display: none';
@@ -66,5 +69,10 @@
 	function minimizeChatBox() {
 		document.getElementById('user-chat-box-maximized').style.cssText = 'display: none';
 		document.getElementById('user-chat-box-minimized').style.cssText = 'display: block';
+	}
+
+	function clearTypedText() {
+		document.getElementById('chat-message-input').innerText;
+		console.log("Hi : ",document.getElementById('chat-message-input').value)
 	}
 </script>

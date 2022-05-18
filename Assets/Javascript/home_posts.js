@@ -73,9 +73,9 @@ let newPostDom = function(post,userDet)
   
     <div class="post-comments">
       <form id="post-${ post._id }-comments-form" action="/comments/create" method="post">
-        <input type="text" name="content" placeholder="Type Here To Add Comment" style="width: 200px;">
-        <input type="hidden" name="post" value="${post._id}">
-        <input type="submit" value="Add Comment">
+        <input class="type-comment" type="text" name="content" placeholder="Type Here To Add Comment" style="width: 200px;">
+        <input class="hidden-comment" type="hidden" name="post" value="${post._id}">
+        <input class="comment-add-button" type="submit" value="Add">
       </form>
     
       <div class="post-comments-list">
