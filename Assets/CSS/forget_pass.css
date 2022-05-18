@@ -1,0 +1,38 @@
+#forgor-pass-outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh; }
+  #forgor-pass-outer #forgor-pass {
+    background-color: white;
+    height: 500px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px; }
+    #forgor-pass-outer #forgor-pass h2 {
+      color: black;
+      height: 30px;
+      font-size: 2.7rem; }
+    #forgor-pass-outer #forgor-pass form {
+      height: 370px;
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      #forgor-pass-outer #forgor-pass form label {
+        color: black; }
+      #forgor-pass-outer #forgor-pass form input {
+        display: block;
+        border-radius: 15px;
+        margin: 0px;
+        padding: 1vh 2vw;
+        font-size: 1.3rem; }
+      #forgor-pass-outer #forgor-pass form #email {
+        height: 30px; }
+      #forgor-pass-outer #forgor-pass form #submit {
+        height: 50px;
+        background-color: #ef7917;
+        color: white;
+        cursor: pointer; }

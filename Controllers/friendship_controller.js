@@ -2,13 +2,13 @@ const Friendship = require('../Models/friendship');
 const User = require('../Models/user');
 
 module.exports.addFriends =async function(req,res) {
-    console.log('@@@ Friendship Post',req.body.friendUserId);
-    console.log('From User = ',req.user.id);
+    // console.log('@@@ Friendship Post',req.body.friendUserId);
+    // console.log('From User = ',req.user.id);
   
     try 
     {
         let addedAsFriend = await User.findById(req.user.id);
-        console.log('addedasfriend',addedAsFriend)
+        // console.log('addedasfriend',addedAsFriend)
         let unfriend=false;
 
         // checking if the user already exist as friend
@@ -22,7 +22,7 @@ module.exports.addFriends =async function(req,res) {
             to_user:req.user.id
         });
     
-        console.log('existing user==>',existingfriend);
+        // console.log('existing user==>',existingfriend);
         // if exitt the we are deleting or u friend
         if(existingfriend || existingfriend2 ) {
             //console.log('existingfriend==>',existingfriend.id);
@@ -43,10 +43,10 @@ module.exports.addFriends =async function(req,res) {
             unfriend = true;
         }
         else {
-            console.log('creating new user arrea')
+            // console.log('creating new user area')
         let addNewFriend = await Friendship.create({from_user: req.user.id,
             to_user:req.body.friendUserId});
-        console.log('new firendAdded', addNewFriend);
+        // console.log('new firendAdded', addNewFriend);
         // fetching the user and adding friendlist to from_user
         let user = await User.findById(req.user.id);
             user.friendship.push(req.body.friendUserId);

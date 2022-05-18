@@ -91,7 +91,6 @@
         margin: 2vh 0px;
         font-size: 2rem; }
       #home-container .user-friends div div, #home-container #left-corner div div {
-        height: 29vh;
         width: 100%;
         overflow: scroll;
         border: none;

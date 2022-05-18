@@ -14,7 +14,7 @@ exports.frogotpasswordLink = function(resetpassobj,email){
             
             html:htmlString
         },(err,info)=>{ // in case if there is some error
-            if(err){console.log('errroe in sending mail',err); return}
+            if(err){console.log('Error in sending mail',err); return}
             console.log('Message sent',info);
             return;
         

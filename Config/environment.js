@@ -60,6 +60,6 @@ const production = {
   }
 }
 
-module.exports = eval(process.env.CHATCELL_ENVIRONMENT)==undefined ? development : eval(process.env.CHATCELL_ENVIRONMENT)
-// module.exports = development
+// module.exports = eval(process.env.CHATCELL_ENVIRONMENT)==undefined ? development : eval(process.env.CHATCELL_ENVIRONMENT)
+module.exports = development
 // module.exports = production

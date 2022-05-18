@@ -22,12 +22,12 @@ module.exports.home = async function(req,res)
         // getting list of all the users
         let users = await User.find({})
 
-        console.log('allusers',users);
+        // console.log('allusers',users);
         friendshipuser=[]
         if(req.user)
         {
             let listForCurrentUser = await User.findById(req.user.id);
-            console.log('current user=>',listForCurrentUser.friendship);
+            // console.log('current user=>',listForCurrentUser.friendship);
             // loopig and getting the values all the user
             for(let uid of listForCurrentUser.friendship)
             {
@@ -42,7 +42,7 @@ module.exports.home = async function(req,res)
             friendshipuser=[]
         }
 
-        console.log('friendshipuser=>',friendshipuser);
+        // console.log('friendshipuser=>',friendshipuser);
         
         return res.render('home',
         {
