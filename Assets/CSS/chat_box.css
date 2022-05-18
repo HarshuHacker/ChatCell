@@ -1,9 +1,9 @@
 #user-chat-box-minimized {
   position: fixed;
-  bottom: 9vh;
+  bottom: 7.5vh;
   right: 2vw;
   border: 1px solid grey;
-  border-radius: 25px;
+  border-radius: 15px;
   height: 3 vh;
   width: 40vw;
   max-width: 300px;
@@ -29,10 +29,10 @@
 
 #user-chat-box-maximized {
   position: fixed;
-  bottom: 9vh;
+  bottom: 7.5vh;
   right: 2vw;
   border: 1px solid grey;
-  border-radius: 25px;
+  border-radius: 15px;
   height: 45 vh;
   width: 40vw;
   max-width: 300px;

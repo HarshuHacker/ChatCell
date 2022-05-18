@@ -132,7 +132,7 @@ app.use(session({
     store:MongoStore.create(
         {
             // the location where the cookie will be stored
-            mongoUrl: "mongodb://localhost/chatcell_development-sir",
+            mongoUrl: "mongodb://localhost/chatcell_development-mongo-store",
             // if we want the cookie to be removed automatically
             autoRemove: "disabled"
         },
