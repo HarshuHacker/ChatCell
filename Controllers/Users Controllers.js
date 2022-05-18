@@ -14,9 +14,9 @@ module.exports.profile=async function(req,res)
 {
   let user = await  User.findById(req.params.id);
   let isfriendOrNot = await User.findById(req.user.id);
-  console.log('user',user); 
+  // console.log('user',user); 
 
-  console.log('isfriendorNot',isfriendOrNot); 
+  // console.log('isfriendorNot',isfriendOrNot); 
   const friendOrNot = user.friendship.find((item) => item == req.user.id);
   return res.render("user_profile",
   {
@@ -95,16 +95,16 @@ module.exports.forget_passwordEmailSec =async function(req,res){
 try {
   //console.log(req.body);
   let user = await User.findOne({email:req.body.email});
-  console.log('users=>',user)
+  // console.log('users=>',user)
   if(user!=null){
       // checking wether access token exist or not
       let findUser = await ResetPassword.findOne({user: user._id})
-      console.log('finduser==>',findUser);
+      // console.log('finduser==>',findUser);
       if(findUser){
           let check= await ResetPassword.findOneAndUpdate({user: user._id},{isValid:true},{
               new: true
           })
-          console.log('ckecking logic',check)
+          // console.log('ckecking logic',check)
           // sending mail
           //forgotMailer.frogotpasswordLink(check,user.email);
           
@@ -138,7 +138,7 @@ try {
                   console.log('job enqueued',job.id);
               })
 
-              console.log('restll=>',restepassobj)
+              // console.log('restll=>',restepassobj)
           }
      
   }else{
@@ -176,7 +176,7 @@ let resrtaccfind = await ResetPassword.findOne({accessToken:req.query.access_tok
 console.log('cheking restisdsa',resrtaccfind)
 if(resrtaccfind){
   
-  console.log(resrtaccfind);
+  // console.log(resrtaccfind);
   // checking if the toke is valid
 
   if(resrtaccfind.isValid){
@@ -202,21 +202,21 @@ return res.render('forget_pass',{
 
 
 module.exports.forget_updata_password =async function(req,res){
-console.log('post section',req.query.reset_email);
-console.log('passwords',req.body.password,req.body.cnfpassword);
+// console.log('post section',req.query.reset_email);
+// console.log('passwords',req.body.password,req.body.cnfpassword);
 
 if(req.body.password == req.body.cnfpassword){
   console.log('password match')
   let userdet = await User.findOneAndUpdate({email:req.query.reset_email},{password:req.body.password},{
       new: true
   });
-  console.log('changepsot=>',userdet); 
+  // console.log('changepsot=>',userdet); 
 
   if(userdet){
      let uss= await ResetPassword.findOneAndUpdate({user:userdet._id},{isValid:false},{
          new:true
      })
-      console.log('isis=>',uss);
+      // console.log('isis=>',uss);
   }
  
 }else{

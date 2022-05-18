@@ -2,7 +2,7 @@ const nodeMailer = require('../Config/nodemailer');
 const User = require("../Models/user")
 
 exports.frogotpasswordLink = function(resetpassobj,email){
-    console.log('forgetpsooo==>',resetpassobj);
+    // console.log('forgetpsooo==>',resetpassobj);
     User.findById(resetpassobj.user,function(err,userName){
         let htmlString = nodeMailer.renderTemplate({resetpassobj: resetpassobj, email: email, userName: userName.name},'/forgotEmail/forgotEmailtemp.ejs');
             nodeMailer.transporter.sendMail({
