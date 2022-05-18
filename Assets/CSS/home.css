@@ -46,6 +46,10 @@
         border-radius: 5px;
         padding: 10px;
         background-color: #eceffa; }
+        #home-container #feed-posts #posts-list-container ol li small .toggle-like-button {
+          text-decoration: none; }
+          #home-container #feed-posts #posts-list-container ol li small .toggle-like-button .liked-button {
+            color: #3b57bb; }
         #home-container #feed-posts #posts-list-container ol li .post-comments form {
           display: flex;
           justify-content: space-evenly; }

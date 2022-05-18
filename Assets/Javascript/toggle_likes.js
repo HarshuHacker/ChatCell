@@ -3,6 +3,7 @@ class ToggleLike{
   constructor(toggleElement){
       this.toggler = toggleElement;
       this.toggleLike();
+			this.liked=false
   }
 
 
@@ -21,15 +22,22 @@ class ToggleLike{
               console.log(likesCount);
               if (data.data.deleted == true){
                   likesCount -= 1;
+									this.liked=false
                   
               }else{
                   likesCount += 1;
+									this.liked=true
               }
 
-
               $(self).attr('data-likes', likesCount);
-              $(self).html(`<i class="fa-regular fa-heart"></i> ${likesCount}`);
-
+              if(this.liked == true)
+							{
+								$(self).html(`<i class="fas fa-thumbs-up liked-button"></i> ${likesCount}`) 
+							}
+							else
+							{
+								$(self).html(`<i class="far fa-thumbs-up"></i> ${likesCount}`) 
+							}
           })
           .fail(function(errData) {
               console.log('error in completing the request');
