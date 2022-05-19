@@ -36,3 +36,8 @@
         background-color: #ef7917;
         color: white;
         cursor: pointer; }
+    #forgor-pass-outer #forgor-pass .password-expired {
+      height: 370px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
